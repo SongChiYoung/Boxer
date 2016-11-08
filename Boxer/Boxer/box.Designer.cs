@@ -28,7 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Control;
+            this.listView1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.listView1.Location = new System.Drawing.Point(1, 36);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(289, 226);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDown);
+            this.listView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseMove);
+            this.listView1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseUp);
             // 
             // box
             // 
@@ -38,9 +52,11 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(289, 261);
             this.ControlBox = false;
+            this.Controls.Add(this.listView1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Name = "box";
             this.Opacity = 0.5D;
+            this.Load += new System.EventHandler(this.box_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.box_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.box_DragEnter);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.box_MouseDown);
@@ -51,5 +67,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView listView1;
     }
 }

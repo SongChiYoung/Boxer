@@ -35,6 +35,7 @@ namespace Boxer
         {
             ip_update();
             client_panel.Enabled = false;
+            this.MaximumSize = this.Size;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -82,6 +83,7 @@ namespace Boxer
 
         private void run_server_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             open_box();
         }
     }

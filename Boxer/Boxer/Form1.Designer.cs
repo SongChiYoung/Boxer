@@ -256,6 +256,7 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.server_panel);
             this.Controls.Add(this.menuStrip2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Boxer";
             this.Text = "Boxer";
